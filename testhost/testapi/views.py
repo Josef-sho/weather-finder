@@ -43,6 +43,5 @@ def home(request):
         }
         print(f'the data {edited_data}')
         return render(request, "index.html", context)
-
-
+
     return render(request, "index.html")
