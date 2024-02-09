@@ -6,7 +6,7 @@ def get_lon_lat(place):
     url = "https://api.opencagedata.com/geocode/v1/json"
     params = {
     "q" : "Nigeria,abeokuta",
-    "key": "1bf7cd2a2df44832b4b3ef23d2a0424c",
+    "key": "1bf7cd2a2df44832b4b3ef23d2a0424c",#invalid key
 }
     response = requests.get(url, params=params)
     data = response.json()
@@ -43,5 +43,6 @@ def home(request):
         }
         print(f'the data {edited_data}')
         return render(request, "index.html", context)
-
+
+
     return render(request, "index.html")
